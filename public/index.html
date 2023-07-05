@@ -1,89 +1,523 @@
+
 <!DOCTYPE html>
-<html>
-  <head>
+<html lang="en">
+<head>
+    <!-- META TAGS -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Welcome to Firebase Hosting</title>
+    <meta name="author" content="AtypicalThemes">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=5">
 
-    <!-- update the version number as needed -->
-    <script defer src="/__/firebase/9.23.0/firebase-app-compat.js"></script>
-    <!-- include only the Firebase features as you need -->
-    <script defer src="/__/firebase/9.23.0/firebase-auth-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-database-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-firestore-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-functions-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-messaging-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-storage-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-analytics-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-remote-config-compat.js"></script>
-    <script defer src="/__/firebase/9.23.0/firebase-performance-compat.js"></script>
-    <!-- 
-      initialize the SDK after all desired features are loaded, set useEmulator to false
-      to avoid connecting the SDK to running emulators.
-    -->
-    <script defer src="/__/firebase/init.js?useEmulator=true"></script>
+    <!-- WEBSITE TITLE & DESCRIPTION -->
+    <title>Land Owners Share Properties Pvt.Ltd. </title>
+    <meta name="description" content="Showcase your luxurious apartments with this luxurious template">
+    <meta name="keywords" content="real estate, landing page, ecommerce, business, home, house">
 
-    <style media="screen">
-      body { background: #ECEFF1; color: rgba(0,0,0,0.87); font-family: Roboto, Helvetica, Arial, sans-serif; margin: 0; padding: 0; }
-      #message { background: white; max-width: 360px; margin: 100px auto 16px; padding: 32px 24px; border-radius: 3px; }
-      #message h2 { color: #ffa100; font-weight: bold; font-size: 16px; margin: 0 0 8px; }
-      #message h1 { font-size: 22px; font-weight: 300; color: rgba(0,0,0,0.6); margin: 0 0 16px;}
-      #message p { line-height: 140%; margin: 16px 0 24px; font-size: 14px; }
-      #message a { display: block; text-align: center; background: #039be5; text-transform: uppercase; text-decoration: none; color: white; padding: 16px; border-radius: 4px; }
-      #message, #message a { box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24); }
-      #load { color: rgba(0,0,0,0.4); text-align: center; font-size: 13px; }
-      @media (max-width: 600px) {
-        body, #message { margin-top: 0; background: white; box-shadow: none; }
-        body { border-top: 16px solid #ffa100; }
-      }
-    </style>
-  </head>
-  <body>
-    <div id="message">
-      <h2>Welcome</h2>
-      <h1>Firebase Hosting Setup Complete</h1>
-      <p>You're seeing this because you've successfully setup Firebase Hosting. Now it's time to go build something extraordinary!</p>
-      <a target="_blank" href="https://firebase.google.com/docs/hosting/">Open Hosting Documentation</a>
+    <!-- OG meta tags that improve the look of your post on social media -->
+    <meta property="og:site_name" content=""/>
+    <!--website name-->
+    <meta property="og:site" content=""/>
+    <!--website link-->
+    <meta property="og:title" content=""/>
+    <!--Post title-->
+    <meta property="og:description" content=""/>
+    <!--Post description-->
+    <meta property="og:image" content=""/>
+    <!-- Image link (jpg only)-->
+    <meta property="og:url" content=""/>
+    <!--where do you want your post to link to-->
+    <meta property="og:type" content="article"/>
+
+    <!-- Favicon and Apple Icons -->
+
+    <!-- STYLES -->
+    <!-- Bootstrap -->
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.min.css">
+
+    <!-- SweetAlert2 JS -->
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Linearicoms -->
+    <link href="css/linearicons.min.css" rel="stylesheet">
+    <!-- Animations -->
+    <link href="css/animations.css" rel="stylesheet">
+    <!-- Lightbox -->
+    <link href="css/lightbox.min.css" rel="stylesheet">
+    <!-- Video Lightbox -->
+    <link href="css/modal-video.min.css" rel="stylesheet">
+    <!-- Main Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/form.css" rel="stylesheet">
+</head>
+<body>
+<!-- Loading Screen -->
+<div id="loader-wrapper"><img class="loader-logo img-fluid" src="images/city.svg" alt="lading screen logo">
+    <p class="loader-logo">Land Owners Share Properties Pvt.Ltd.</p>
+    <div id="progress"></div>
+    <p class="loader-text">LOADING</p>
+</div>
+
+<!-- //// HEADER //// -->
+<header id="main-header">
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light">
+        <div class="container">
+            <!-- Site Logo -->
+            <a id="main-logo" class="navbar-brand" href="#">LandOwnersShare</a>
+            <!-- Dropdown Button -->
+            <button id="hamburger" class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation"><span class="icon-bar"></span> <span class="icon-bar"></span> <span
+                    class="icon-bar"></span></button>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About us</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#vision">Our Vision</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#why">Why Us?</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#collab">Our Collaborations</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#team">Meet Our Team</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cta">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</header>
+<!-- Header End -->
+
+<!-- /// HERO SECTION /// -->
+<div id="hero-section">
+    <div class="row hero-unit angled-section large-margin">
+        <div class="container">
+            <div class="hero-caption"><!-- Main Tagline -->
+                <div class="animation-element pop-in"><img id="logo" src="images/city.svg" class="img-fluid" alt="logo">
+                </div>
+                <div class="animation-element slide-down">
+                    <h1>Land Owners Share Properties Pvt.Ltd.</h1>
+                    <p>&nbsp;</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <p id="load">Firebase SDK Loading&hellip;</p>
+    <!-- Hero Section End -->
+    <div class="container"><a id="cta"></a>
+        <!-- Nav Anchor -->
+        <div class="row justify-content-center tiny-margin text-center">
+            <h1 class="short-hr-center">YOUR NEW HOME IS WAITING</h1>
+        </div>
+        <div class="row">
+            <div class="col-3	" style="display: grid">
+            </div>
+            <div class="col-6" style="display: grid">
+                <form id="contactForm">
+                    <div class="mb-3">
+                        <label class="form-label" for="selectCity">Select City</label>
+                        <select class="form-select" id="selectCity" aria-label="Select City">
+                            <option value="Hyderabad">Hyderabad</option>
+                            <option value="Banglore">Banglore</option>
+                            <option value="Chennai">Chennai</option>
+                            <option value="Pune">Pune</option>
+                            <option value="Mumbai">Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="enterPincode">Enter Pincode</label>
+                        <input class="form-control" id="enterPincode" type="text" placeholder="Enter Pincode"
+                               data-required/>
+                        <div class="invalid-feedback" data-sb-feedback="enterPincode:required">Enter Pincode is
+                            required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="typeOfProperty">Type Of Property</label>
+                        <select class="form-select" id="typeOfProperty" aria-label="Type Of Property">
+                            <option value="1 BHK">1 BHK</option>
+                            <option value="2 BHK">2 BHK</option>
+                            <option value="3 BHK">3 BHK</option>
+                            <option value="4 BHK">4 BHK</option>
+                            <option value="5 BHK">5 BHK</option>
+                            <option value="Pent House">Pent House</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="budget">Budget</label>
+                        <select class="form-select" id="budget" aria-label="Budget">
+                            <option value="50 to 75 Lacs">50 to 75 Lacs</option>
+                            <option value="75 to 1 crore">75 to 1 crore</option>
+                            <option value="1 crore to 1.25 crore">1 crore to 1.25 crore</option>
+                            <option value="1.25 crore to 1.50 crore">1.25 crore to 1.50 crore</option>
+                            <option value="1.5 crore to 1.75 crore">1.5 crore to 1.75 crore</option>
+                            <option value="1.75 crore to 2 crore">1.75 crore to 2 crore</option>
+                            <option value="2 crore to 2.5 crore">2 crore to 2.5 crore</option>
+                            <option value="2.5 crore to 2.75 crore">2.5 crore to 2.75 crore</option>
+                            <option value="Above 3 crores">Above 3 crores</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="enterPhoneNumber">Enter Phone Number</label>
+                        <input class="form-control" id="enterPhoneNumber" type="text" placeholder="Enter Phone Number"
+                               required/>
+                        <div class="invalid-feedback" data-sb-feedback="enterPhoneNumber:required">Enter Phone Number is
+                            required.
+                        </div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="phasing">Phasing</label>
+                        <select class="form-select" id="phasing" aria-label="Phasing">
+                            <option value="East">East</option>
+                            <option value="West">West</option>
+                            <option value="South">South</option>
+                            <option value="North">North</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="community">Community</label>
+                        <select class="form-select" id="community" aria-label="Community">
+                            <option value="Gated">Gated</option>
+                            <option value="Standalone">Standalone</option>
+                        </select>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="stageOfHome">Stage Of Home </label>
+                        <select class="form-select" id="stageOfHome" aria-label="Stage Of Home ">
+                            <option value="Ready To Move">Ready To Move</option>
+                            <option value="Under Construction">Under Construction</option>
+                        </select>
+                    </div>
+                    <div class="d-none" id="submitErrorMessage">
+                        <div class="text-center text-danger mb-3">Error sending message!</div>
+                    </div>
+                    <div class="d-grid">
+                        <button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button>
+                    </div>
+                </form>
+            </div>
 
-    <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const loadEl = document.querySelector('#load');
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
-        // // The Firebase SDK is initialized and available here!
-        //
-        // firebase.auth().onAuthStateChanged(user => { });
-        // firebase.database().ref('/path/to/ref').on('value', snapshot => { });
-        // firebase.firestore().doc('/foo/bar').get().then(() => { });
-        // firebase.functions().httpsCallable('yourFunction')().then(() => { });
-        // firebase.messaging().requestPermission().then(() => { });
-        // firebase.storage().ref('/path/to/ref').getDownloadURL().then(() => { });
-        // firebase.analytics(); // call to activate
-        // firebase.analytics().logEvent('tutorial_completed');
-        // firebase.performance(); // call to activate
-        //
-        // // 🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥🔥
+        </div>
+        <div class="container">
 
-        try {
-          let app = firebase.app();
-          let features = [
-            'auth', 
-            'database', 
-            'firestore',
-            'functions',
-            'messaging', 
-            'storage', 
-            'analytics', 
-            'remoteConfig',
-            'performance',
-          ].filter(feature => typeof app[feature] === 'function');
-          loadEl.textContent = `Firebase SDK loaded with ${features.join(', ')}`;
-        } catch (e) {
-          console.error(e);
-          loadEl.textContent = 'Error loading the Firebase SDK, check the console.';
+            <div id="data-table">
+                <table id="html-data-table">
+
+
+                </table>
+            </div>
+        </div>
+    </div>
+
+
+
+
+<div class="container"> <!-- /// Container /// -->
+    <!-- /// ABOUT SECTION /// -->
+    <div id="about-section" class="large-margin"><a id="about"></a><!-- Nav Anchor -->
+        <div class="row justify-content-center tiny-margin">
+            <h2 class="heading">ABOUT US </h2>
+        </div>
+        <div class="row text-center medium-margin">
+            <!-- Feature Card -->
+            <div class="row">
+                <div class="feature reset animation-element slide-down"><i class="lnr lnr-apartment"></i>
+                    <p class="text-justify">Harsha Vardhan Reddy One of the pioneers in the real-estate industry,
+                        has over 2 decades of expertise in banking and finance.
+                        He brings on-board a unique vision and management practice for his vast clientele to
+                        diversify and grow together. A foundation stands strong with a compatible team and an
+                        understanding leader, Harsha Vardhan being an exceptional leader formed a strong base team
+                        through the years.
+                        His expertise in the industry led to the inception of Vardhan Realty, Exclusive Real Estate
+                        Marketing &amp; Sales Allied Services.
+                        It implements a customer-centric approach towards the real-estate market with a stronghold
+                        in Hyderabad, Bangalore, Mysore and Tirupati markets.
+                        Through years Vardhan Realty helped customers understand dream homes. He also established
+                        Mast Loans - An entity that provides optimum financial solutions for diverse requirements of
+                        the customers as well as the builders such as construction loans, developer finance, home
+                        loans, mortgage loans, transfer loans etc.
+                        From providing a new loan to assisting in transfer of existing loans to lower interest rates
+                        Mast loans helped shape the term financial consultation for all.
+                        Now with his proficiency and enriching industry knowledge he is instilling an organization
+                        named landowners Share Properties Pvt.Ltd. for the mutual benefit of all the sectors
+                        involved in the real-estate market.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="feature reset animation-element slide-down">
+                    <p class="text-justify">Land Owners Share Properties Pvt.Ltd envisions to develop a
+                        collaborative harmony between the landowners-builders-customers. Enriching lives through the
+                        lens of spaces that create value to each of the sectors that are landowners , builders and
+                        customers is what we stand for.
+                        We epitomize the philosophy of understanding the perspective based lifestyle demands in this
+                        urban setup and deliver you with the space of your vision.
+
+                        Urbanization is ever-evolving and is in constant quest for spaces that can not only
+                        accommodate but also support you in your purpose-led life. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /// Container End /// -->
+
+<div class="container"> <!-- /// Container /// -->
+    <!-- /// PRICING SECTION /// -->
+    <div id="plans-and-pricing-section" class="large-margin"><a id="vision"></a><!-- Nav Anchor -->
+        <div class="row justify-content-center tiny-margin">
+            <h2 class="heading">Our Vision</h2>
+        </div>
+
+        <h4 class="text-center">Creating perspective-led spaces</h4>
+        <div class="row text-center medium-margin">
+
+            <p>&nbsp;The vision of our company is to provide you with a space you can call home that enhances the
+                quality of life and meets all your desires with zero compromise.
+                We are committed to turn your dream into reality.</p>
+        </div>
+    </div>
+</div>
+
+<!-- /// Container End /// -->
+
+<div class="container"> <!-- /// Container /// -->
+    <!-- /// PRICING SECTION /// -->
+    <div id="why-section" class="col"><a id="why"></a><!-- Nav Anchor -->
+        <div class="row justify-content-center tiny-margin">
+            <h2 class="heading">Why Choose Us ?</h2>
+        </div>
+        <div class="row text-center medium-margin">
+            <div class="col">
+            </div>
+
+            <div class="col-8">
+
+                <ol style="list-style: none">
+                    <li>
+                        Strategically making spaces according to your requirements
+                    </li>
+                    <li>
+                        Vast variety of options for you choose from
+                    </li>
+                    <li>
+                        Delivering your abodes in the stipulated time period
+
+                    </li>
+                </ol>
+
+
+            </div>
+            <div class="col">
+            </div>
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <!-- Partners -->
+            <div>
+                <h3>Our Collaborations</h3>
+                <div class="table-responsive">
+                    <table class="table">
+                        <tbody>
+                        <tr>
+                            <td>MRKR Constructions</td>
+                            <td>Meda Group</td>
+                            <td>Mahaveer Group</td>
+                            <td>Meda Constructions</td>
+                            <td>Pavani Group</td>
+                        </tr>
+                        <tr>
+                            <td>SLN Group</td>
+                            <td>Bhuvana Construction company</td>
+                            <td>Rayal Constructions</td>
+                            <td>Tirumala Construction</td>
+                            <td>SVRS Group</td>
+                        </tr>
+                        <tr>
+                            <td>Navaami Group</td>
+                            <td>EAPL Group</td>
+                            <td>Shilpa Group</td>
+                            <td>Prestige Group</td>
+                            <td>Engineers syndicates</td>
+                        </tr>
+                        <tr>
+                            <td>Rajapushpa</td>
+                            <td>Sobha Group</td>
+                            <td>Signature Group</td>
+                            <td>Anand realty</td>
+                            <td>Sobha Group</td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <br>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container"> <!-- /// Container /// -->
+    <!-- /// ABOUT SECTION /// -->
+    <div id="teams" class="large-margin"><a id="team"></a><!-- Nav Anchor -->
+        <div class="row justify-content-center tiny-margin">
+            <h2 class="heading">Meet Our Chairman/Founder </h2>
+        </div>
+        <div class="row text-center medium-margin">
+            <!-- Feature Card -->
+
+            <div class="row">
+                <div class="feature reset animation-element slide-down">
+                    <!--<h3 class="text-center"> Meet our Chairman/Founder&nbsp;</h3>-->
+                    <h3 class="text-justify">Harsha Varshan Reddy&nbsp;</h3>
+                    <h6 class="text-justify">MBA (Finance &amp; Marketing)&nbsp;</h6>
+                    <h6 class="text-justify">23+ Years of Expertise in Banking &amp; Infrastructure&nbsp;</h6>
+                    <p class="text-justify">As a real estate company holder I believe in providing all my customers
+                        not just a house but the feeling and warmth of a home where they can build a family and
+                        enjoy the story of life.&nbsp;</p>
+                    <p class="text-justify">&nbsp;</p>
+                    <div class="row justify-content-center tiny-margin">
+                        <h2 class="heading" style="background: #f9f9f9;">Board of Directors </h2>
+                    </div>
+                    <h3 class="text-justify">Ciri Kovida&nbsp;</h3>
+                    <h6 class="text-justify">PG Advertising &amp; Integrated Marketing Communications&nbsp;</h6>
+                    <p class="text-justify">Fresh minds for an elevated industry&nbsp;</p>
+                    <p class="text-justify">Copywriter &amp; Advertising Specialist, Ciri Kovida recently
+                        collaborated with all the entities of Harsha Vardhan Reddy to contribute her learnings to
+                        elevate the attributes of the establishment &amp; walk in the chairman’s path of making
+                        customer satisfaction her top priority.&nbsp;</p>
+                    <p class="text-justify">&nbsp;</p>
+                    <h3 class="text-justify">Pasham Rajani</h3>
+                    <p class="text-justify">On the board of directors since the company was established, Pasham
+                        Rajani has played a crucial role in the design and interior aspect of the projects
+                        developed. She is the 1st member of the board alongside the chairman who helped in the
+                        growth of the company. </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- /// CTA SECTION /// -->
+<div id="cta-section">
+
+    <div id="footer">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <p>Copyright Harshavardhan <span id="year"> </span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- //// SCRIPTS //// -->
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/blazy.min.js"></script>
+<script src="js/lightbox.min.js"></script>
+<script src="js/jquery-modal-video.min.js"></script>
+<script src="js/validator.min.js"></script>
+<script src="js/vertiglast.js"></script>
+<script>
+
+    var form = document.getElementById("contactForm");
+
+    form.addEventListener("submit", submitForm);
+
+    function submitForm(event) {
+        event.preventDefault(); // prevent default form submission behavior
+
+        // get form data
+        var city = document.getElementById("selectCity").value;
+        var pincode = document.getElementById("enterPincode").value;
+        var propertyType = document.getElementById("typeOfProperty").value;
+        var phoneNumber = document.getElementById("enterPhoneNumber").value;
+        var phasing = document.getElementById("phasing").value;
+        var community = document.getElementById("community").value;
+        var stageOfHome = document.getElementById("stageOfHome").value;
+        var budget = document.getElementById("budget").value;
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyDLMeMyMBDAdM_pR7xCiMIrSBPV97dMa7U",
+            authDomain: "harshasprojects.firebaseapp.com",
+            projectId: "harshasprojects",
+            storageBucket: "harshasprojects.appspot.com",
+            messagingSenderId: "1046678969831",
+            appId: "1:1046678969831:web:9d3e64792025d08038b142",
+            measurementId: "G-KZ7YSX8CSQ"
+        };
+
+        firebase.initializeApp(firebaseConfig);
+        var database = firebase.firestore();
+        database.collection("leads").add({
+            city: city,
+            pincode: pincode,
+            propertyType: propertyType,
+            phoneNumber: phoneNumber,
+            phasing: phasing,
+            community: community,
+            stageOfHome: stageOfHome,
+            budget: budget
+        }).then(function () {
+            Swal.fire({
+                icon: 'success',
+                title: 'Your Request Submitted successfully!',
+                text: 'Thank you for submitting the form.',
+                confirmButtonText: 'OK'
+            });
+            var pincode = document.getElementById('enterPincode').value;
+            var url = `https://api.postalpincode.in/pincode/${pincode}`;
+
+            fetch(url)
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    // JSON data is available here
+                    console.log(data);
+                    generateTable(data);
+                })
+                .catch(function (error) {
+                    console.log("Error:", error);
+                });
+
+            form.reset();
+
+
+        }).catch(function (error) {
+            // show error message
+            document.getElementById("submitErrorMessage").classList.remove("d-none");
+            console.error("Error submitting form data:", error);
+        })
+
+    }
+
+
+    function generateTable(data) {
+        var tableBody = document.getElementById('html-data-table');
+        tableBody.innerHTML = ''; // Clear any existing rows
+
+        if (data && data[0] && data[0].PostOffice) {
+            var postOffices = data[0].PostOffice;
+
+            postOffices.forEach(function (postOffice) {
+                var row = document.createElement('tr');
+
+                // Loop through each property of the post office
+                Object.keys(postOffice).forEach(function (key) {
+                    var cell = document.createElement('td');
+                    cell.textContent = postOffice[key];
+                    row.appendChild(cell);
+                });
+
+                tableBody.appendChild(row);
+            });
         }
-      });
-    </script>
-  </body>
+    }
+
+</script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.1.4/dist/sweetalert2.all.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/8.10.1/firebase.min.js"
+        integrity="sha512-mv/hkUwB2NiwaWwoWXwxw5K2zFigukUoV8EDpBtDHTheV7FlDMPvqvsRHMwPzgtFFcYc66iXMr90LdS49nCgBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+</div>
+
+</body>
 </html>
